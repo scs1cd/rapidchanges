@@ -1,0 +1,8 @@
+* file containing x, y, z, f
+ggf100k_tllxyz3
+* dth, dph, ns, ne
+36 72 1 1999
+* Rm_ratio, lat_range, F scale type
+0.00000615253 90.0 3
+* Number of time pt of max F
+1177
