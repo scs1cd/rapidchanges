@@ -126,12 +126,3 @@ Python script to determine the Mound et al (2015) compliance of Hemispheric SV (
 Reads in the output from Calculate-Hsv
 
 output is columns of timepoints, compliance(Hsv) -- (no header)
-
-# Hsv-summary-stats
-
-Once the Hsv and its compliance have been calculated, this python script will generate some summary stats. 
-
-Input filename needed is the one from Calculate-Hsv
-
-Output file has a headerline and gives: total number of timpoints, total time elapsed, avg value, standard deviation of value
-for both Hsv and its compliance (one file for each)
