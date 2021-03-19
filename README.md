@@ -54,7 +54,29 @@ There are a number of output files, which will be produced in a new directory:
 
 # SpikeI
 
-This code takes 
+This code takes a file of the form surface_ts_vec_00001.dat and produces rates of change on a grid of points.  
+The code can be found in:
+
+/nfs/a88/earcd/GAUSS_SPIKE/DYNAMO_CODES/
+
+To compile do
+
+ifort -o spikeI spikeI.f90
+
+This code produces the following files. All filenames use the same stem, which is based on the input file name. 
+If the input file is called LSMOD.2_tllxyz3 then we get
+* LSMOD.2_tllxyz3_spike_the_alldt_lr=90_type=3_ns=0001 - rate of change at every point on the grid and every point in time. Columns are lat, lon, dtdt, dvgpdt, dvdmdt, dfdt, time of fastest change at this location
+* LSMOD.2_tllxyz3_spike_int_maxts_lr=90_type=3_ns=0001 - data at the location corresponding to location of maximum change in intensity (int), i.e. dfdt. 
+* LSMOD.2_tllxyz3_spike_the_maxts_lr=90_type=3_ns=0001 - as above but for theta (\hat{B})
+* LSMOD.2_tllxyz3_spike_vdm_maxts_lr=90_type=3_ns=0001 - as above but for VDM (P_V)
+* LSMOD.2_tllxyz3_spike_vgp_maxts_lr=90_type=3_ns=0001 - as above but for VGP (\hat{P_V})
+* LSMOD.2_tllxyz3_spike_the_lr=90_type=3_ns=0001 - ax change in theta, VGP, VDM and F at each point
+
+Using the notation in Davies & Constable (2020) we have the following mapping: 
+* dtdt = d \hat{B} / dt
+* dvgpdt = d \hat{P_V} / dt
+* dfdf = d B / dt
+* dvdmdt = d P_V / dt
 
 # Windowing
 
