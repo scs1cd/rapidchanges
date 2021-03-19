@@ -1,0 +1,28 @@
+* This is a test input file for paleo libraries.
+* Any line starting with a * should be ignored.
+*
+* Input directory
+./
+*
+* Root of files names
+  surface
+*
+* Data information:
+* lmax, mmax, Ntime, No segments
+  32 32 1 1
+*
+* Data points:
+* Radius | Max theta | Min Theta | Max phi | Min phi | theta inc | phi inc
+* Gauss coefficients are always first upward contiued: ar0 = 0.547 in parameters.f90
+* Radius used in magfdz and split_sym
+  6371.0        45           -45          180        0         2          2
+*
+* Data Manipulation:
+* Remove dipole | Remove non-axisymmetric field
+  0               0
+*
+* Choices of output:
+* Averages | Time-series | Vector | Proj | Spectra | Coefficients
+  1          1             1        1      1         1
+* E, Ra, Ros, q for naming only
+5e-4 250d0 1e-4 5d0
