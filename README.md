@@ -9,6 +9,19 @@ ylm2glm ->
 
 These notes discuss these codes in turn. 
 
+BUT - first there is a key point. The current dynamo code is hardwired to write out the state of the system in files in the form 
+
+state????.cdf.dat
+
+This means that there is a max of 9999 states that can be written for a single run. The post-processing codes below 
+read statefiles of the form
+
+state?????.cdf.dat
+
+i.e. there is an extra digit. So, when you have run a simulation you need to convert the names of all statefiles as
+
+rename state state0 state????.cdf.dat
+
 # Ylm2glm
 
 This codes takes the poloidal spherical harmonic coefficients from the statefiles and produces Gauss coefficients at the surface. 
