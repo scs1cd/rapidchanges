@@ -3,9 +3,9 @@
 # Workflow
 To obtain rates of change at Earth's surface requires running the following codes: 
 
-ylm2glm 
--> brdot -> christensen_criteria (optional)
--> paleo -> spikeI -> python notebooks
+ylm2glm ->
+* brdot -> christensen_criteria (optional)
+* paleo -> spikeI -> python notebooks
 
 These notes discuss these codes in turn. 
 
