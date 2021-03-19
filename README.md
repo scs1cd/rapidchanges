@@ -28,9 +28,18 @@ The values of Rm are used to convert the timescale in the simulations, which use
 units. If you do not mind about this then you can put any numbers here. 
 
 Outputs: 
+* gauss_coeffs_surface - columns: l, m, glm. 
+* gauss_coeffs_time - columns: dimensionless time, dimensional time (diffusion times). 
 
-gauss_coeffs_surface - columns: l, m, glm. 
-gauss_coeffs_time - columns: dimensionless time, dimensional time (diffusion times). 
+# Paleo
+
+This code takes gauss_coeffs_surface and produces the magnetic elements X, Y,Z, I, D, F at Earth's surface on a regular grid. 
+This code can be found in: 
+
+/nfs/a88/earcd/CODES/PALEO_LIBS
+
+To compile do: make
+
 
 # Windowing
 
