@@ -40,6 +40,21 @@ This code can be found in:
 
 To compile do: make
 
+To run, go to the directory containing gauss_coeffs_surface and do
+
+paleo < paleo_input.in
+
+The input file paleo_input.in contains comments that describe the inputs. 
+
+There are a number of output files, which will be produced in a new directory:
+* surface_ts_dir_00001.dat - time series of directional data: : time, lat, lon, I_dipole, I, Ianomaly=I-Idipole, D
+* surface_ts_vec_00001.dat - time series of vector data: time, lat, lon, X, Y, Z, F, F_dipole
+* surface_ts_vgp_00001.dat - time series of VGP data (x, and y are the Mollweide projection of the VGP coordinates)
+* A number of _ave_ files containing averages. 
+
+# SpikeI
+
+This code takes 
 
 # Windowing
 
