@@ -44,6 +44,8 @@ Outputs:
 * gauss_coeffs_surface - columns: l, m, glm. 
 * gauss_coeffs_time - columns: dimensionless time, dimensional time (diffusion times). 
 
+IMPORTANT - YLM2GLM truncates the SH expansion at lmax=32
+
 # Paleo
 
 This code takes gauss_coeffs_surface and produces the magnetic elements X, Y,Z, I, D, F at Earth's surface on a regular grid. 
@@ -57,7 +59,8 @@ To run, go to the directory containing gauss_coeffs_surface and do
 
 paleo < paleo_input.in
 
-The input file paleo_input.in contains comments that describe the inputs. 
+The input file paleo_input.in contains comments that describe the inputs. Note if you are running paleo on the output from 
+ylm2glm then you need to set lmax=mmax=32. 
 
 There are a number of output files, which will be produced in a new directory:
 * surface_ts_dir_00001.dat - time series of directional data: : time, lat, lon, I_dipole, I, Ianomaly=I-Idipole, D
